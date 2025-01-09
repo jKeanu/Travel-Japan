@@ -1,0 +1,25 @@
+
+
+body{
+    background-color: white;
+    margin: 0px;
+}
+ul{
+    padding-left: 0px;
+    list-style-type: none;
+    margin: 0px;
+}
+
+li{
+    display: inline-block;
+}
+a {
+    text-decoration: none;
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: Roboto;
+}

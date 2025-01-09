@@ -1,0 +1,474 @@
+h1, h2, h3, h4, h5{
+    letter-spacing: .15em;
+    font-size: 2rem;
+}
+.japan-map-section{
+    background-color: rgb(241, 241, 241);
+    padding-bottom: 2rem;
+}
+/*Map section*/
+.japan-map-container{
+    position: relative;
+    height: fit-content;
+    width: fit-content;
+    margin: 0 auto;
+}
+.map-section-header{
+    position: absolute;
+    font-family: Roboto;
+    font-weight: 600;
+    left: 0;
+    top: 0.5rem;
+}
+
+.japan-map{
+    position: relative;
+    width: 100rem;
+    height: 78rem;
+}
+
+.japan-region{
+    transition: fill 0.2s;
+    -webkit-transition: fill 0.2s;
+}
+
+.map_lines path{
+    pointer-events: none;
+}
+
+
+/*location and region name*/
+.map-location-link{ 
+    position: absolute;
+}
+
+.map-location-name{
+    font-size: 0.9rem;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    color: black;
+    transition: transform 0.2s, color 0.2s, -webkit-transform 0.2s;
+    -webkit-transition: transform 0.2s, color 0.2s, -webkit-transform 0.2s;
+}
+
+.region-link{
+    position: absolute;
+}
+
+.region-name{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: rgb(0, 0, 0, 0.65);
+    transition: -webkit-transform 0.2s, color 0.2s, transform 0.2s;
+    -webkit-transition: -webkit-transform 0.2s, color 0.2s, transform 0.2s;;
+}
+
+.region-name:hover{
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    color: rgb(255, 0, 0,0.4);
+}
+
+/*Marker*/
+
+.location-marker-link{
+    position: absolute;
+    top: 50%;
+    width: 0.6rem;
+    height: 0.8rem;
+    transition: transform 0.2s, -webkit-transform 0.2s;
+    -webkit-transition: transform 0.2s, -webkit-transform 0.2s;
+}
+
+.location-marker{
+    height: 100%;
+    width: 100%;
+}
+
+.location-marker use {
+    width: 100%; /* Adjust the width percentage as needed */
+    height: 100%; /* Adjust the height percentage as needed */
+}
+
+.location-marker{
+    filter: drop-shadow(0 1px 2px rgba(0,0,0,.70));
+    -webkit-filter: drop-shadow(0 1px 2px rgba(0,0,0,.70));
+}
+
+/*showcase*/
+
+.region-showcase{
+    position: absolute;
+    top: 5%;
+    left: 0%;
+    width: 44rem;
+}
+
+.region-gallery{
+    display: grid;
+    grid-template-columns: 22rem 22rem;
+    column-gap: 0rem;
+    row-gap: 0rem;
+}
+
+.region-gallery img{
+    height: 12rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.region-description header{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 1.7rem;
+    color: white;
+    margin-bottom: 0.5rem;
+}
+.region-description span{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+    color: white;
+    pointer-events: none;
+}
+.region-description{
+    background-color: rgb(32, 32, 32);
+    padding: 1.2rem;
+}
+
+.prev-button-showcase, .next-button-showcase{
+    position: absolute;
+    background-color: transparent;
+    width: 5rem ;
+    height: 24rem;
+    text-align: center;
+    border: none;
+    opacity: 0;
+    -webkit-opacity: 0;
+    pointer-events: none;
+    transition: box-shadow 0.2s ease-in-out -webkit-box-shadow 0.2s ease-in-out;
+    -webkit-transition: box-shadow 0.2s ease-in-out -webkit-box-shadow 0.2s ease-in-out;
+}
+
+
+#prev-showcase, #next-showcase{
+    width: 100%;
+    height: 100%;
+}
+.prev-button-showcase{
+    text-align: left;
+    left: 0;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    top: calc(5% + 12rem);
+}
+
+.next-button-showcase{
+    text-align:right;
+    transform: translate(-100%, -50%);
+    -webkit-transform: translate(-100%, -50%);
+    top: calc(5% + 12rem);
+    left: 44rem;
+}
+
+
+.region-showcase{
+    opacity: 0;
+    -webkit-opacity: 0;
+    pointer-events: none;
+    transition: -webkit-opacity 0.25s ease-in-out, opacity 0.25s ease-out;
+    -webkit-transition: -webkit-opacity 0.25s ease-out, opacity 0.25s ease-out;;
+}
+
+.showcase-prefecture-links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.showcase-prefecture-links li{
+    margin: 0 0.5rem;
+}
+.showcase-prefecture-link{
+    color: white;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    position: relative;
+}
+
+.showcase-prefecture-link::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: white;
+    width: 100%;
+    transform: scaleX(0);
+    transform-origin: center;
+    -webkit-transform-origin: center;
+    -webkit-transform: scaleX(0);
+    transition: -webkit-transform 0.2s ease-in-out, transform 0.2s ease-in-out;
+    -webkit-transition: -webkit-transform 0.2s ease-in-out, transform 0.2s ease-in-out; 
+    height: 0.1rem;
+    border-radius: 0.1rem;
+}
+.showcase-prefecture-link:hover::before{
+    transform-origin: center;
+    transform: scaleX(1);
+    -webkit-transform-origin: center;
+    -webkit-transform: scaleX(1);
+}
+
+
+/*Plan your trip section*/
+.plan-your-trip-section{
+    margin-top: 1.5rem;
+}
+
+.plan-your-trip-header{
+    width: calc(68vw + 15px);
+    color: black;
+    margin: 0 auto;
+    padding: 2vh 0 3vh  0;
+    font-family: Roboto;
+}
+
+.plan-your-trip-container{
+    width: fit-content;
+    height: fit-content;
+    margin: 0 auto;
+}
+
+
+.plan-your-trip-grid{
+    display: grid;
+    grid-template-columns: 17rem 17rem 17rem 17rem;
+    grid-gap: 1rem;
+
+}
+
+.plan-your-trip-content{
+    height: 20rem;
+    -webkit-box-shadow:  -0.2rem 0.07rem 0.05rem var(--hover-color);
+    box-shadow: -0.2rem 0.07rem 0.05rem var(--hover-color);
+    transition: box-shadow 0.2s ease-in-out -webkit-box-shadow 0.2s ease-in-out;
+    -webkit-transition: box-shadow 0.2s ease-in-out, -webkit-box-shadow 0.2s ease-in-out;
+    text-decoration: none;
+    padding: 1rem;
+}
+
+.plan-your-trip-content:hover{
+    box-shadow: -0.4rem 0.14rem 0.05rem var(--hover-color);
+    -webkit-box-shadow:  -0.4rem 0.14rem 0.05rem var(--hover-color); 
+}
+
+.plan-link-img-container{
+    height: 4rem;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.plan-link-img-container img{
+    height: 100%;
+    opacity: 0.8;
+    -webkit-opacity: 0.8;
+}
+
+
+
+.plan-link-header{
+    font-weight: bold;
+    color: rgb(110, 110, 110);
+    text-align: center;
+    margin: 0.7rem 0 0.2rem 0;
+}
+
+.plan-links{
+    display: flex;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.plan-links li{
+    display: inline-block;
+    width: fit-content;
+    margin-top: 0.4rem;
+}
+
+.plan-link{
+    font-family: Roboto;
+    color: rgb(110, 110, 110);
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 0.5rem;
+    position: relative;
+}
+
+.plan-link::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    border-radius: 2px;
+    background-color: #a3a3a3;
+    bottom: 0;
+    left: 0;
+    transform-origin: left;
+    transform: scaleX(0);
+    -webkit-transform: scaleX(0);
+    -webkit-transform-origin: left;
+    transition: transform .2s ease-in-out, -webkit-transform .2s ease-in-out;
+}
+
+.plan-link:hover::before{
+    transform-origin: right;
+    transform: scaleX(1);
+    -webkit-transform: scaleX(1);
+    -webkit-transform-origin: right;
+}
+
+/*Popular place section*/
+
+.popular-places-section{
+    margin-top: 1.5rem;
+}
+.popular-places-header{
+    width: calc(68vw + 15px);
+    color: black;
+    margin: 0 auto;
+    padding: 2vh 0 3vh  0;
+    font-family: Roboto;
+}
+
+.grid-popular-places{
+    width: calc(68vw + 15px);
+    margin: 0 auto;
+}
+.popular-place-link{
+    display: inline-block;
+}
+
+.popular-place-container{
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 5px; /*gutter in masonry is only used for the sides*/
+
+}
+.popular-place-link img{
+    transition: -webkit-transform 0.3s, transform 0.3s;
+    -webkit-transition: -webkit-transform 0.3s, transform 0.3s;
+    width: 17vw;
+    vertical-align: top;/*since there are spaces at the bottom of images, we need this to get rid of that*/
+
+}
+
+.popular-place-link img:hover {
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+}
+
+
+.popular-place-name{
+    position: absolute;
+    color: white;
+    font-size: 1.2vw;
+    bottom: 1vh;
+    left: 0.5vw;
+}
+
+
+
+/*adventure section*/
+.discover-japan-section{
+    margin-top: 1.5rem;
+}
+.adventure-header{
+    width:100%;
+    color: black;
+    padding: 2vh 0 3vh  0;
+    font-family: Roboto;
+}
+.adventure-swiper{
+    overflow: hidden;
+    height: 20rem;
+    position: relative;
+}
+
+.adventure-link{
+    width: 100%;
+    height: 20rem;
+    display: inline-block;
+    position: relative;
+}
+.adventure-img{
+    height: 100%!important;
+    width: 100%;
+    object-fit: cover;
+
+}
+.adventure-title-container{
+    background-color: rgb(0, 0, 0, 0.7);
+    position: absolute;
+    z-index: 50;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    -webkit-opacity: 0;
+    transition: 0.3s;
+    pointer-events: none;
+}
+
+.adventure-link:hover .adventure-title-container{
+    opacity: 1;
+    -webkit-opacity: 1;
+}
+
+.adventure-title{
+    padding: auto;
+    color: white;
+    display: inline-block;
+    font-size: 2vw;
+    white-space: nowrap;
+}
+
+.adventure-pagination{
+    position: absolute;
+    z-index: 1;
+    text-align: center;
+}
+
+.next-adventure, .prev-adventure{
+    position: absolute;
+    height: 3rem;
+    width: 3rem;
+}
+
+.next-adventure{
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%); ;
+    z-index: 1;
+}
+
+.prev-adventure{
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    z-index: 1;
+}
+
+.next-adventure img, .prev-adventure img{
+    width: 100%;
+}

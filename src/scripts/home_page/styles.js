@@ -1,0 +1,7 @@
+import '../../styles/general.css'
+import '../../styles/header.css'
+import '../../styles/main.css'
+import '../../styles/slide.css'
+import '../../styles/more_options.css'
+import '../../styles/footer.css'
+import '../../styles/sidebar.css'

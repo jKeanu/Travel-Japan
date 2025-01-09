@@ -1,0 +1,35 @@
+*{
+    box-sizing: border-box; /*this makes the border not take up additional space*/
+    padding: 0px;
+    margin: 0px;
+}
+
+.hero-slides{
+    position: relative;
+    overflow: hidden;
+    height: calc(100vh - 3rem);
+    margin-top: 3rem;
+}
+
+
+.swiper-slide img{
+    width: 100%;
+    height: calc(100vh - 3rem);
+    object-fit: cover;
+}
+.tj_logo{
+    z-index: 20;
+    background-color: rgb(243, 243, 243, 0.15);
+    padding: 70% 2.3%;
+    position: absolute; /* set position absolute on child element */
+    top: 43%; /* move element 50% down from top of parent */
+    left: 50%; /* move element 50% right from left of parent */
+    transform: translate(-50%, -50%); /* translate back half of element width*/
+    -webkit-transform: translate(-50%, -50%);;
+    backdrop-filter: blur(0.05vw);
+}
+.tj_logo img{
+    width: 15vw;
+
+}
+
