@@ -4,7 +4,6 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/bundle';
 
-
 let swiper3 = new Swiper(".right-dslides", {
     grabCursor: true,
     effect: "creative",
