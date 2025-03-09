@@ -49,13 +49,13 @@ export default {
         hot: true,
         compress: true,
         historyApiFallback: {
-            index: 'travel_japan.html'
+            index: 'index.html'
         },
     },
     plugins: [
         new HtmlWebpackPlugin({
-            title: 'Webpack App',
-            filename: 'travel_japan.html',
+            title: 'Travel Japan',
+            filename: 'index.html',
             template: 'public/template.html',
             chunks: ['home_page'],
             templateParameters: {
