@@ -20,7 +20,6 @@ export default {
             './src/scripts/home_page/dropdown.js',
             './src/scripts/home_page/masonry.js',
             './src/scripts/home_page/swiper.js',
-            './src/scripts/home_page/images.js',
             './src/scripts/home_page/regions.js',
             './src/scripts/home_page/sidebar.js',
             './src/scripts/home_page/location_marker.js'

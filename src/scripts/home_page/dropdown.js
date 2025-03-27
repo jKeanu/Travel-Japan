@@ -1,29 +1,11 @@
 // import Swiper bundle with all modules installed
-import Swiper from 'swiper/bundle';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/bundle';
 
-let swiper3 = new Swiper(".right-dslides", {
-    grabCursor: true,
-    effect: "creative",
-    loop: true,   
-    creativeEffect: {
-      prev: {
-        shadow: true,
-        translate: ["-20%", 0, -1],
-      },
-      next: {
-        translate: ["100%", 0, 0],
-      },
-    },
-  });
-
-
 const main_dropdown = document.querySelector('.dropdown-main-container');
 const dropdown_right_section =  document.querySelectorAll('.section-right-dsection')
 const section_button = document.querySelectorAll('.dsection-button')
-const slides = document.querySelectorAll('.right-dslides')
 const header_button = document.querySelectorAll('.button-link')
 const main_contents = document.querySelectorAll('.dropdown-main-section-container')
 let last_content = null
