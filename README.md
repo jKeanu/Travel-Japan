@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/1490a126-999d-42cc-a123-fc783090d536" max-width:90%; margin: 0 auto 44px;"/>
+  <img src="https://github.com/user-attachments/assets/1490a126-999d-42cc-a123-fc783090d536"/>
 </div>
 
 # Travel Japan
@@ -21,7 +21,7 @@ An interactive static website showcasing Japan’s prefectures, regions, and cul
 
 ### 🛠️ Installation
 ```bash
-git clone git@github.com:jKeanu/travelJapan.git
+git clone https://github.com/jKeanu/Travel-Japan.git
 npm install
 npm run dev
 
