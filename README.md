@@ -1,8 +1,7 @@
-<div align="center">
-  <img src="https://github.com/user-attachments/assets/1490a126-999d-42cc-a123-fc783090d536"/>
-</div>
 
-# Travel Japan
+![travel_japan_readme_image](https://github.com/user-attachments/assets/722c931d-610a-416e-89d6-64eaa02e2804)
+
+# Travel Japan 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 An interactive static website showcasing Japan’s prefectures, regions, and cultural highlights through a dynamic map and visuals. 
